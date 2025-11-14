@@ -123,5 +123,24 @@ $ C = "N. detected faults"/"Total N. faults" $
 
     #text(red)[Insert transition diagram]
 
+  === Markov process analysis
+
+    The aim of Markov process analysis is to compute $P_i (t)$, or the probability that the system is in state $i$ at time $t$. Once $P_i (t)$ is known, the reliability, availability or safety of the system can be compute as a sum taken from all the operating states. To compute $P_i (t)$, we derive a set of differential equations, called state transition equations, one for each state of the system. We usually arrange these equations in matrix form.
+
+    The *transition matrix* $M$ has entries $m_"ij"$ representing the rates of transition between the states $i$ and $j$, where the first one is he column and the second one is the row. The full matrix has the following form
+
+    $ M = mat(m_"11" m_"21"; m_"12" m_"22") $ 
+
+    The entries in each column must add up to 0. Entries such as $m_"ii"$, corresponding to self transitions, are computed as $-(sum "entries in this column")$.
+
+    Some important properties of the transition matrix are:
+    - The sum of the values in each column add up to 1
+    - Positive sign of $m_"ij"$ coefficient indicate that the transition originates rom from the $i$ state.
+    - $M$ allows us to distinguish between operational and failed states, where each failed state $i$ has zero diagonal element $M_"ii"$.
+
+    The *state transition equations* can be defined from a vector $arrow(P)_i (t)$ whose $i$ element is the probability $P_i (t)$ that a system is in state $i$ at time $t$. The matrix representation is given by the following equation:
+
+    $ d/"dt" arrow(P) (t) = arrow(M) dot arrow(P) (t) $
+
 #text(red)[Insert until diapo 28]
 
