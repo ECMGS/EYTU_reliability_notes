@@ -142,5 +142,14 @@ $ C = "N. detected faults"/"Total N. faults" $
 
     $ d/"dt" arrow(P) (t) = arrow(M) dot arrow(P) (t) $
 
-#text(red)[Insert until diapo 28]
+    The resulting matrix equation in a system of three equations would be:
+
+    $ d / "dt" mat(P_1 (t); P_2 (t); P_3 (t)) = mat(m_"11" m_"21" m_"31"; m_"12" m_"22" m_"32"; m_"13" m_"23" m_"33") dot mat(P_1 (t); P_2 (t); P_3 (t)) $
+
+    === Dependent component case
+
+    In a *dependent component case*, the value of the Markov chains become evident when component failures cannot be assumed to be independent. This because if two components share the same load and one fails, then the additional load on the second component increases its failure rate.
+
+
+#text(red)[Insert until diapo 28 - 3rd ppt]
 
